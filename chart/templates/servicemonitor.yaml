@@ -18,5 +18,6 @@ spec:
     matchNames: 
     - {{ .Release.Namespace }}
   selector:
-    {{- include "ta-exporter.selectorLabels" . | nindent 4 }}
+    matchLabels:
+      {{- include "ta-exporter.selectorLabels" . | nindent 6 }}
 {{- end }}
